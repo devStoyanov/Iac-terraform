@@ -1,15 +1,14 @@
 name: "Terraform Plan"
-run: |
-
-  terraform plan -input=false -var rg_name=$RG_NAME
 
 on:
   pull_request:
+
 
 env:
   TF_CLOUD_ORGANIZATION: "dev-azure-terraform"
   TF_API_TOKEN: "${{ secrets.TF_API_TOKEN }}"
   TF_WORKSPACE: "terraform-workflow"
+  TF_VAR_rg_name: "terraform-test-rg" 
   CONFIG_DIRECTORY: "./"
 
 

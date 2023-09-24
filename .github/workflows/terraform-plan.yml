@@ -8,8 +8,7 @@ env:
   TF_API_TOKEN: "${{ secrets.TF_API_TOKEN }}"
   TF_WORKSPACE: "terraform-workflow"
   CONFIG_DIRECTORY: "./"
-run: |
- terraform plan -var="rg_name"="terraform_vm_test" -var="rg_location"="northeurope"  -no-color -input=false
+
 
 jobs:
   terraform:

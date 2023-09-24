@@ -20,8 +20,8 @@ provider "azurerm" {
 }
 
 resource "azurerm_resource_group" "my-rg" {
-  name     = "terraform-test-rg"
-  location = "northeurope"
+  name     = var.rg_name
+  location = var.rg_location
   tags = {
     environment = "dev"
   }

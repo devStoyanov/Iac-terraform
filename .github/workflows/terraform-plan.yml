@@ -1,11 +1,10 @@
 name: "Terraform Plan"
-
-on:
-  pull_request:
-
 run: |
 
   terraform plan -input=false -var rg_name=$RG_NAME
+
+on:
+  pull_request:
 
 env:
   TF_CLOUD_ORGANIZATION: "dev-azure-terraform"

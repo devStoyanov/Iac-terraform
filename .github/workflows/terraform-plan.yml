@@ -8,6 +8,8 @@ env:
   TF_CLOUD_ORGANIZATION: "dev-azure-terraform"
   TF_API_TOKEN: "${{ secrets.TF_API_TOKEN }}"
   TF_WORKSPACE: "terraform-workflow"
+  TF_VAR_rg_name: "terraform-test-rg"
+  TF_VAR_rg_location: "northeurope"
   CONFIG_DIRECTORY: "./"
 
 

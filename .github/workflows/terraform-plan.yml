@@ -3,6 +3,10 @@ name: "Terraform Plan"
 on:
   pull_request:
 
+run: |
+
+  terraform plan -input=false -var rg_name=$RG_NAME
+
 env:
   TF_CLOUD_ORGANIZATION: "dev-azure-terraform"
   TF_API_TOKEN: "${{ secrets.TF_API_TOKEN }}"

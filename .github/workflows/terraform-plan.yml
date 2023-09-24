@@ -31,11 +31,6 @@ jobs:
           directory: ${{ env.CONFIG_DIRECTORY }}
           speculative: true
 
-      - name: Set Terraform Environment Variables
-        run: |
-
-          echo "TF_VAR_my_rg=terraform-test3-rg" >> $GITHUB_ENV
-
       - name: Create Plan Run
         uses: hashicorp/tfc-workflows-github/actions/create-run@v1.0.0
         id: plan-run
